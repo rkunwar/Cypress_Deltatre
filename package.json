@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/rkunwar/Cypress_Deltatre#readme",
   "devDependencies": {
-    "cypress": "^5.4.0"
+    "@testing-library/dom": "^7.26.3",
+    "cypress": "^5.4.0",
+    "cypress-xpath": "^1.6.0"
   }
 }
