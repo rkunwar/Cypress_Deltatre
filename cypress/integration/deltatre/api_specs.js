@@ -12,9 +12,7 @@ describe(' API Calls', () => {
             
             expect(resp.status).to.eq(200);
             users = resp.body;
-            console.log(users);
-
-           assert.typeOf(users, 'array', 'we have an array');
+            assert.typeOf(users, 'array', 'we have an array');
            expect(users).to.have.lengthOf.above(1);
         })
     })
