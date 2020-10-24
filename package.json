@@ -1,0 +1,22 @@
+{
+  "name": "assesment",
+  "version": "1.0.0",
+  "description": "Deltatre Assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkunwar/Cypress_Deltatre.git"
+  },
+  "author": "Rubesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rkunwar/Cypress_Deltatre/issues"
+  },
+  "homepage": "https://github.com/rkunwar/Cypress_Deltatre#readme",
+  "devDependencies": {
+    "cypress": "^5.4.0"
+  }
+}
