@@ -25,6 +25,9 @@ First API makes a GET Call and verify the response code is 200 with returned bod
 Second API makes a POST Call and verify the response code is 201 and verify the returned body has the data that was sent with the POST payload. Verification for Name and Username.
 
 To run test for API: cypress run --spec .\cypress\integration\deltatre\api_specs.js
+If you want to see the output on the browser console run the API test on browser: 
+cypress run --browser {{browser}} --spec .\cypress\integration\deltatre\api_specs.js
+
 
 # Known Problems and WorkArounds
 1. There could be issues while running the tests in Firefox Browser with version < 80. This is because of the slowness of the Firefox browser to do the Garbage Collection cleanup between the tests. To mitigate i have disabled the GC Collection on Global Cypress Configs and my tests were running on Firefox Browser version 81.
