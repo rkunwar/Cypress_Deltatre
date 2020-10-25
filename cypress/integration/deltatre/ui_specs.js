@@ -1,10 +1,6 @@
 Cypress.on('fail', (err, runnable) => {
     debugger
   })
-
-
- 
-
 describe('Stories', () => {
 
    let user = Cypress.env('email');
@@ -22,7 +18,7 @@ context('Full HD Resolution', () => {
     it('Logging In ', () =>{
         
         cy.xpath('//*[@id="login-form:email"]').type(user);
-        cy.xpath('//*[@id="login-form:password"]').type("john")
+        cy.xpath('//*[@id="login-form:password"]').type(password)
         cy.xpath('//*[@id="login-form:login"]').click();
         cy.xpath('//*[@id="logout-form"]/div[2]/label').contains('John Smith');
     });
@@ -52,9 +48,14 @@ context('Full HD Resolution', () => {
         cy.xpath('//*[@id="autoquote:next"]').click();
         cy.xpath('//*[@id="quote-result"]/h1[1]').contains('Automobile Instant Quote');
         cy.xpath('//*[@id="quote-result:purchase-quote"]').click();
+        cy.xpath('//*[@id="purchaseQuote:cardnumber"]').type(creditDetails);
+        cy.xpath('//*[@id="purchaseQuote:expiration"]').type('07/22');
+        cy.xpath('//*[@id="purchaseQuote:purchase"]').click();
+        cy.xpath('//*[@id="content-main"]/h1').contains('Congratulations');
+        cy.xpath('//*[@id="content-main"]/p[1]').contains('You have purchased a new auto policy');
+        cy.xpath('//*[@id="purchase-form:customer-details"]').click();
+        cy.get('.x-grid3-row-first').contains('td', 'car');
     })
-
-
 
 })
 })
